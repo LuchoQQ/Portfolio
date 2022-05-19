@@ -12,7 +12,6 @@ const FormInput = ({type, placeholder, id}) => {
             variant={'flushed'}
             p={'2vw'}
             w={'50%'}
-            color={'#dedede'}
             fontSize={'xl'}
             focusBorderColor={'#ad1d71'}
         />

@@ -1,6 +1,8 @@
-import { Box, Button, Flex, FormControl, Grid, Input, Text } from '@chakra-ui/react'
+import { Box, Button, Flex, FormControl, Grid, Icon, Input, Text } from '@chakra-ui/react'
 import React from 'react'
 import FormInput from '../components/FormInput'
+import BsLinkedin from 'react-icons/bs'
+
 
 const Contact = () => {
   return (
@@ -64,13 +66,42 @@ const Contact = () => {
 
 
 
-                <Flex
+                <Grid
                     w="50%"
                     h="100%"
                     bg={'#ad1d71'}
+                    justifyContent={'center'}
+                    alignItems={'center'}
                 >
+                    <Box>
+                        <Text
+                            fontSize={'4xl'}
+                            color={'#080808'}
+                            fontWeight={'bold'}
+                            justifySelf={'center'}
+                        >
+                            Contact
+                        </Text>
+                        <Text 
+                            mb={'2vh'}
+                            color={'#080808'}
+                            fontSize={'lg'}
+                            fontWeight={'medium'}
+                        >
+                            lucianosanchez125@hotmail.com
+                        </Text>
+                        
+                        <Text color={'#080808'} fontWeight={'Bold'} fontSize={'2xl'}>Based in</Text>
+                        <Text color={'#080808'} font>Argentina, Corrientes Capital</Text>
 
-                </Flex>
+                        <Grid>
+                            
+                        </Grid>
+
+                    </Box>
+                    
+                    
+                </Grid>
             </Flex>
         </Grid>
     </>
