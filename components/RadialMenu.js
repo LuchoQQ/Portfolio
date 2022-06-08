@@ -14,8 +14,8 @@ const RadialMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
   return (
     <Box>
-        <UnorderedList
-           p={'14rem'}
+        <Box
+            p={'12rem'}
             position={'relative'}
             display={'flex'}
             justifyContent={'center'}
@@ -53,7 +53,7 @@ const RadialMenu = () => {
 
 
 
-        </UnorderedList>
+        </Box>
     </Box>
     )
 }

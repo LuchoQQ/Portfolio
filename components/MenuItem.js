@@ -16,8 +16,9 @@ const MenuItem = ({path, name}) => {
               fontSize={{ base: 'md', md: 'md' , lg: 'lg'}} 
               cursor={"pointer"} 
               color={"#fff"}
-              _hover={{color: "#FF81BE", textShadow: "0px 0px 3px #FF81BE", transform: "scale(1.1)"}}
+              _hover={{color: "#FF81BE", textShadow: "0px 0px 3px #FF81BE", transform: "scale(1.2)"}}
               transition={"all 0.2s ease-in-out"}
+              px={'0.5vw'}
             >
                 {name}
             </Text>

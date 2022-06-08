@@ -1,115 +1,115 @@
-import React from 'react'
-import { Flex, Grid, Box, Image, Text, Input} from '@chakra-ui/react'
+import React from "react";
+import { Flex, Grid, Box, Image, Text, Input } from "@chakra-ui/react";
 
-import {motion} from 'framer-motion'
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+import { useEffect } from "react";
 
 const Hero = () => {
-  const initial = {
-    opacity: 0,
-    y: -100
-  }
+	const control = useAnimation();
+	const [ref, inView] = useInView();
 
-  const animate = {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 1,
-      ease: [0.6, 0.05, -0.01, 0.9],
-      delay: 0.5
-    }
-  }
+	const boxVariant = {
+		visible: { opacity: 1, scale: 1, transition: { duration: 0.5 } },
+		hidden: { opacity: 0, scale: 0 },
+	};
 
+	useEffect(() => {
+		if (inView) {
+			control.start("visible");
+		} else {
+			control.start("hidden");
+		}
+	}, [control, inView]);
 
-  return (
-    <>
-      <Grid
-        autoFlow="column"
-        width={"100vw"}
-        position={"relative"}
-        height={"90vh"}
-        zIndex={"100"}
-        
-      >
-          <Box
-            width={'50vw'}
-            display={"flex"}
-            flexDirection={"column"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <motion.div
-              initial={initial}
-              animate={animate}
-              fontSize={'5vw'}
-              fontWeight={'bold'}
-              color={'#fff'}
-              textShadow={'0px 0px 10px #FF81BE'}
-              >
-              <Text
-                fontSize={"1.5rem"}
-                color={"#fff"}
-                textShadow={'2px 0px 0px #ad1d71'}
-              >
-                Hello, my name is
-              </Text>
+	return (
+		<motion.div
+			className="box"
+			ref={ref}
+			variants={boxVariant}
+			initial="hidden"
+			animate={control}
+		>
+			<Grid
+				autoFlow="column"
+				width={"100vw"}
+				position={"relative"}
+				height={"90vh"}
+				zIndex={"100"}
+				justifyContent={"center"}
+			>
+				<Box
+					width={["100%", "100%", "50vw", "50vw"]}
+					display={"flex"}
+					flexDirection={"column"}
+					justifyContent={"center"}
+					alignItems={"center"}
+				>
+					<Text
+						fontSize={["1.5rem", "1.5rem", "2.5rem", "3rem"]}
+						color={"#fff"}
+						textShadow={"2px 0px 0px #ad1d71"}
+					>
+						Hello, my name is
+					</Text>
 
-            
-            
-            
-            <Text
-              fontSize={"3rem"}
-              textShadow={'2px 0px 0px #ad1d71'}
-            >
-              Luciano <span style={{ color: "#ad1d71"}}>Sánchez</span>
-            </Text>
-            <Text
-              fontSize={"1.5rem"}
-              textShadow={'2px 0px 0px #ad1d71'}
-            >
-              I am Frontend Developer
-            </Text>
-            <Box marginTop={"15vh"}>
-              <Text 
-                marginBottom={'2vh'}
-                textShadow={'1px 0px 0px #ad1d71'}
-              >Enter your Email.</Text>
-              <Input focusBorderColor={"#ad1d71"} placeholder='Insert ur email' size='lg' w={"25vw"}/>
-            </Box>
-            </motion.div>
-          </Box>
-          <Box
-            width={"50vw"}
-            display={"flex"}
-            justifyContent={"center"}
-            alignItems={"center"}
-          >
-            <Box 
-              width={"500px"}
-              height={"500px"}
-              bg={"rgba(0,0,0,0)"}
-              borderRadius={'50%'}
-              outline={"10px solid #ad1d71"}
-              boxShadow={'1px 1px 100px #ad1d71, inset -1px -1px 20px #ad1d71'}
-              position={"absolute"}
-              overflowY={"hidden"}
-            >
-              <Image 
-                src='https://res.cloudinary.com/diylksocz/image/upload/v1652741247/foto_eblyef.png' alt="idk"
-                width={'350px'}
-                filter={"grayscale(100%)"}
-                position={'absolute'}
-                zIndex={'-10'}
-                objectFit={'cover'}
-                marginLeft={'4.5vw'}
-                marginTop={"5vh"}
-            />
-            </Box>
-            
-          </Box>
-      </Grid>
+					<Text fontSize={"3rem"} textShadow={"2px 0px 0px #ad1d71"}>
+						Luciano
+					</Text>
+					<Text color="#ad1d71" fontSize={"3rem"}>
+						Sánchez
+					</Text>
+					<Text fontSize={"1.5rem"} textShadow={"2px 0px 0px #ad1d71"}>
+						I am Frontend Developer
+					</Text>
+					<Box marginTop={"15vh"}>
+						<Text marginBottom={"2vh"} textShadow={"1px 0px 0px #ad1d71"}>
+							Enter your Email.
+						</Text>
+						<Input
+							focusBorderColor={"#ad1d71"}
+							placeholder="Insert ur email"
+							size="lg"
+							w={"25vw"}
+						/>
+					</Box>
+				</Box>
 
-    </>
-  )
-}
+				<Flex
+					width={"50vw"}
+					justifyContent={"center"}
+					alignItems={"center"}
+					display={["none", "none", "none", "flex"]}
+				>
+					{
+						<Flex
+							width={["500px"]}
+							height={["500px"]}
+							bg={"rgba(0,0,0,0)"}
+							borderRadius={"50%"}
+							outline={"10px solid #ad1d71"}
+							boxShadow={"1px 1px 50px #ad1d71, inset -1px -1px 20px #ad1d71"}
+							position={"relative"}
+							overflowY={"hidden"}
+							justifyContent={"center"}
+						>
+							<Image
+								src="https://res.cloudinary.com/diylksocz/image/upload/v1652741247/foto_eblyef.png"
+								alt="idk"
+								width={"350px"}
+								filter={"grayscale(100%)"}
+								position={"absolute"}
+								zIndex={"-10"}
+								objectFit={"cover"}
+								marginLeft={"4.5vw"}
+								marginTop={"5vh"}
+							/>
+						</Flex>
+					}
+				</Flex>
+			</Grid>
+		</motion.div>
+	);
+};
 
-export default Hero
+export default Hero;

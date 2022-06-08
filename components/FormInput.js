@@ -8,12 +8,13 @@ const FormInput = ({type, placeholder, id}) => {
             type={type}
             placeholder={placeholder}
             id={id} 
-            color={'#131313'}
+            color={'#dedede'}
             variant={'flushed'}
             p={'2vw'}
-            w={'50%'}
+            w={'100%'}
             fontSize={'xl'}
             focusBorderColor={'#ad1d71'}
+
         />
     </>
   )

@@ -6,7 +6,7 @@ const theme = extendTheme({
         primary: "Space Mono",
     },
     colors: {
-        primary: "#D22589",
+        primary: "#ad1d71",
         secondary: "#FF81BE",
         tertiary: "#fff",
     },
