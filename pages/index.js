@@ -22,15 +22,15 @@ export default function Home() {
 			</Head>
 			<Background>
 				<Navbar />
-				<Flex h={"15vh"} />
+				<Flex h={"15vh"} id='home'/>
 				<Hero />
-				<Flex h={"15vh"} />
+				<Flex h={"15vh"} id="about" />
 				<About />
-				<Flex h={"15vh"} />
+				<Flex h={"15vh"} id="skills" />
 				<Skills />
-				<Flex h={"15vh"} />
+				<Flex h={"15vh"} id="portfolio" />
 				<Portfolio />
-        <Flex h={"15vh"} />
+				<Flex h={"15vh"} id="contact" />
 				<Contact />
 				{/* <Footer /> */}
 			</Background>

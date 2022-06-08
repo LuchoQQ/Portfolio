@@ -41,7 +41,6 @@ const Main = () => {
 				bg={"#080808"}
 				autoFlow={["row", "row", "row", "row", "column"]}
 				fontFamily={""}
-				id={"about"}
 				justifyContent={"center"}
 			>
 				<Flex
@@ -82,7 +81,7 @@ const Main = () => {
 							width: "100%",
 							height: "4px",
 							background: "linear-gradient(to right, #ad1d71, #FF81BE)",
-							
+
 							boxShadow: "0px 0px 10px #ad1d71",
 						}}
 					>

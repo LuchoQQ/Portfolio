@@ -27,21 +27,20 @@ const Skills = () => {
 			initial="hidden"
 			animate={control}
 		>
-			<Grid w="100vw" h={"auto"} autoFlow={"row"} id="skills">
+			<Grid w="100vw" h={"auto"} autoFlow={"row"}>
 				<Flex
 					w="100vw"
-					h="10vh"
+					h="auto"
 					justify={"center"}
 					alignItems={"center"}
 					mb={["20vh", "20vh", "20vh", "10vh"]}
 				>
 					<Text
-						fontSize={"6xl"}
+						fontSize={["4xl", "6xl"]}
 						textShadow={"2px 2px 1px #ad1d71"}
 						position={"relative"}
 						w={"50%"}
 						textAlign={"center"}
-						
 						_before={{
 							content: '""',
 							position: "relative",
@@ -87,10 +86,11 @@ const Skills = () => {
 					>
 						<Grid justifyContent={"center"} gap={"3rem"}>
 							<Flex flexDir={"column"}></Flex>
-							<Text 
-								fontSize={["xl", "xl", "xl", "2xl"]} 
-								w={["90vw", "90vw", "90vw", "30vw"]} 
-								textAlign='center'>
+							<Text
+								fontSize={["xl", "xl", "xl", "2xl"]}
+								w={["90vw", "90vw", "90vw", "30vw"]}
+								textAlign="center"
+							>
 								Sobre desarrollo, Es de mi preferencia el ecosistema de
 								Javascript, me familiaricé con él desde el lado del frontend y
 								el backend con tecnologías como ReactJS, NodeJS, TypeScript y

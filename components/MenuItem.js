@@ -1,6 +1,6 @@
 import React from 'react'
 import {Box, Text} from '@chakra-ui/react'
-import Link from 'next/link'
+import Link from 'react-scroll'
 import { useTheme } from '@emotion/react'
 
 
@@ -10,7 +10,7 @@ const MenuItem = ({path, name}) => {
 
   return (
     <div>
-        <Link href={path}>
+        <Link to={path}>
             <Text
               fontFamily={"Space Mono"}
               fontSize={{ base: 'md', md: 'md' , lg: 'lg'}} 

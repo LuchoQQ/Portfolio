@@ -5,6 +5,8 @@ import { FaCode } from "react-icons/fa";
 import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "@emotion/react";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from 'react-scroll'
+import LinkScroll from "../components/LinkScroll";
 const Navbar = () => {
 	const theme = useTheme();
 	const initial = {
@@ -51,11 +53,11 @@ const Navbar = () => {
 					p={"1vw"}
 					display={["none", "none", "none", "flex"]}
 				>
-					<MenuItem path="/" name={"Home"} />
-					<MenuItem path="/#about" name={"About"} />
-					<MenuItem path="/#skills" name={"Skills"} />
-					<MenuItem path="/#portfolio" name={"Portfolio"} />
-					<MenuItem path="/nose" name={"Contact"} />
+					<LinkScroll path="home" name={"Home"} />
+					<LinkScroll path="about" name={"About"} />
+					<LinkScroll path="skills" name={"Skills"} />
+					<LinkScroll path="portfolio" name={"Portfolio"} />
+					<LinkScroll path="contact" name={"Contact"} />
 				</Grid>
 
 				<Flex
@@ -79,7 +81,12 @@ const Navbar = () => {
 				>
 					Curriculum
 				</Flex>
-				<Icon as={GiHamburgerMenu} w={10} h={10} display={['flex', 'flex', 'none', 'none']}/>
+				<Icon
+					as={GiHamburgerMenu}
+					w={10}
+					h={10}
+					display={["flex", "flex", "none", "none"]}
+				/>
 			</Flex>
 		</Grid>
 	);

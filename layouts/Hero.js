@@ -94,15 +94,13 @@ const Hero = () => {
 							justifyContent={"center"}
 						>
 							<Image
-								src="https://res.cloudinary.com/diylksocz/image/upload/v1652741247/foto_eblyef.png"
+								src=""
 								alt="idk"
-								width={"350px"}
+								width={"900px"}
 								filter={"grayscale(100%)"}
 								position={"absolute"}
 								zIndex={"-10"}
 								objectFit={"cover"}
-								marginLeft={"4.5vw"}
-								marginTop={"5vh"}
 							/>
 						</Flex>
 					}
