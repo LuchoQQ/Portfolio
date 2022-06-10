@@ -26,8 +26,9 @@ const Skills = () => {
 			variants={boxVariant}
 			initial="hidden"
 			animate={control}
+			
 		>
-			<Grid w="100vw" h={"auto"} autoFlow={"row"}>
+			<Grid w="100vw" h={["auto"]} autoFlow={"row"}>
 				<Flex
 					w="100vw"
 					h="auto"
@@ -91,45 +92,13 @@ const Skills = () => {
 								w={["90vw", "90vw", "90vw", "30vw"]}
 								textAlign="center"
 							>
-								Sobre desarrollo, Es de mi preferencia el ecosistema de
+								Es de mi preferencia el ecosistema de
 								Javascript, me familiaricé con él desde el lado del frontend y
 								el backend con tecnologías como ReactJS, NodeJS, TypeScript y
 								NextJS. Sin embargo, siempre estoy dispuesto a aprender nuevas
 								tecnologías.
 							</Text>
-							{/* <Flex flexDir={"column"}>
-								<Flex>
-									<Badge colorScheme={"blue"} ml="2" fontSize={"md"}>
-										HTML5
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										CSS3
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										Javascript
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										React
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										Node
-									</Badge>
-								</Flex>
-								<Flex>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										Mongo
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										Next
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										TypeScript
-									</Badge>
-									<Badge colorScheme={"blue"} ml="1" fontSize={"md"}>
-										HTML5
-									</Badge>
-								</Flex>
-							</Flex> */}
+							
 						</Grid>
 					</Flex>
 				</Grid>

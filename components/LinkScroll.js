@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-scroll";
 import { Text } from "@chakra-ui/react";
-const LinkScroll = ({ path, name }) => {
+const LinkScroll = ({ handle, path, name }) => {
 	return (
 		<>
-			<Link to={path} spy={true} smooth={true} duration={500}>
+			<Link to={path} spy={true} smooth={true} duration={500} onClick={handle}>
 				<Text
 					fontFamily={"Space Mono"}
-					fontSize={{ base: "md", md: "md", lg: "lg" }}
+					fontSize={["2xl","2xl", "2xl", "md", "lg"]}
 					cursor={"pointer"}
 					color={"#fff"}
 					_hover={{
@@ -17,6 +17,7 @@ const LinkScroll = ({ path, name }) => {
 					}}
 					transition={"all 0.2s ease-in-out"}
 					px={"0.5vw"}
+					textAlign={"center"}
 				>
 					{name}
 				</Text>

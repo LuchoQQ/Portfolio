@@ -43,62 +43,90 @@ const Main = () => {
 				fontFamily={""}
 				justifyContent={"center"}
 			>
+				
 				<Flex
 					w={["100%", "100%", "50vw", "50vw"]}
 					display={["none", "none", "none", "none", "flex"]}
 					justifyContent="center"
 					alignItems={["center"]}
 					h={"auto"}
+					role="group"
 				>
+					
 					<Box
-						p={"5vw"}
-						bg={"#ad1d71"}
-						borderBottomRadius={"50%"}
-						borderTopRightRadius={"50%"}
-						background="radial-gradient(circle, rgba(210,68,151,1) 0%, rgba(34,5,22,1) 100%)"
-						boxShadow={"1px 1px 10px 5px #410a2a"}
+						backgroundImage="url('https://res.cloudinary.com/diylksocz/image/upload/v1654816902/Space-PNG-Images-HD_x2b0mj.png')"
+						borderRadius={"30%"}
 					>
-						<Image
-							src={
-								"https://res.cloudinary.com/diylksocz/image/upload/v1652816815/vaporwave_zvehmb.png"
-							}
-							w={[200, 200, 550, 550]}
-							h={[200, 200, 350, 550]}
-						/>
+						
+						<motion.div
+							animate={{ y: [0, -50, 0] }}
+							transition={{ repeat: Infinity, duration: 10 }}
+						>
+							<Image
+								transition={'all 1s ease'}
+								filter="brightness(0.5)"
+								_groupHover={{ filter: "brightness(1)" }}
+								src={
+									"https://res.cloudinary.com/diylksocz/image/upload/v1654723277/Egvz6bdXsAIDorV_jahu6h.png"
+								}
+								w={[200, 200, 550, 550]}
+								h={[200, 200, 350, 550]}
+							/>
+						</motion.div>
 					</Box>
 				</Flex>
+				{/* About! */}
 				<Grid w={["90vw", "90vw", "90vw", "80vw", "50vw"]} gap={"5vh"}>
 					<Text
 						fontSize={["6xl", "6xl", "8xl", "8xl", "8xl"]}
 						justifySelf={"center"}
 						w={"80%"}
 						textAlign={"center"}
-						textShadow={"2px 2px 1px #ad1d71"}
+						textShadow={"2px 2px 1px #482B7A"}
 						_before={{
 							content: '""',
 							position: "relative",
 							display: "block",
 							width: "100%",
 							height: "4px",
-							background: "linear-gradient(to right, #ad1d71, #FF81BE)",
+							background: "linear-gradient(to right, #482B7A,  #FF81BE)",
 
 							boxShadow: "0px 0px 10px #ad1d71",
 						}}
 					>
 						About
 					</Text>
-					<Flex justify={"center"}>
-						<Text
-							fontSize={["xl", "xl", "xl", "2xl"]}
-							textAlign="center"
-							w={"90%"}
-						>
-							Soy un desarrollador fullstack, con una pequeña obsesión con la
-							organización y el diseño milimétrico. La tecnología y la ciencia
-							desde siempre son mi pasión e interés lo que me llevó a
-							introducirme hace 1 año al diseño de aplicaciones web.
-						</Text>
-					</Flex>
+					<Box
+						justify={"center"}
+						fontSize={["xl", "xl", "xl", "2xl"]}
+						textAlign="center"
+						w={"90%"}
+					>
+						<span>Soy un desarrolador</span>
+						<span style={{ color: "#6a3fb5" }}> fullstack</span>
+						<span>
+							, con una{" "}
+							<span style={{ textDecoration: "line-through" }}>pequeña</span>{" "}
+							obsesión con la{" "}
+						</span>
+						<span style={{ color: "#ACF776" }}>organización</span>
+						<span> y el </span>
+						<span style={{ color: "#ACF776" }}> diseño </span>
+						<span>milimétrico</span>
+					</Box>
+					<Box
+						justify={"center"}
+						fontSize={["xl", "xl", "xl", "2xl"]}
+						textAlign="center"
+						w={"90%"}
+					>
+						<span>
+							La tecnología, la ciencia y los videojuegos son algunos de mis
+							intereses, entre ellos la creación de
+						</span>
+
+						<span style={{ color: "#FF81BE" }}> aplicaciones web.</span>
+					</Box>
 				</Grid>
 			</Grid>
 		</motion.div>

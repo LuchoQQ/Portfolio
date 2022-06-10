@@ -8,7 +8,7 @@ import { AiFillHtml5 } from 'react-icons/ai'
 import { RiReactjsLine } from 'react-icons/ri'
 import { FaNodeJs } from 'react-icons/fa'
 import { SiMongodb, SiNextdotjs, SiTypescript } from 'react-icons/si'
-
+import { motion } from 'framer-motion'
 
 const RadialMenu = () => {
     const [isOpen, setIsOpen] = useState(false)
@@ -43,6 +43,7 @@ const RadialMenu = () => {
                     transform={`rotate(${isOpen ? '45deg' : '0deg'})`}
                     />
             </Flex>
+            
             <RadialMenuItem icon={ AiFillHtml5 } translateX={'-170'} translateY={'0'} display={isOpen}/>
             <RadialMenuItem icon={DiCss3} translateX={'-140'} translateY={'-80'} display={isOpen}/>
             <RadialMenuItem icon={RiReactjsLine} translateX={'-70'} translateY={'-140'} display={isOpen}/>
@@ -50,7 +51,6 @@ const RadialMenu = () => {
             <RadialMenuItem icon={SiMongodb} translateX={'100'} translateY={'-120'} display={isOpen}/>
             <RadialMenuItem icon={SiNextdotjs} translateX={'160'} translateY={'-50'} display={isOpen}/>
             <RadialMenuItem icon={SiTypescript} translateX={'165'} translateY={'50'} display={isOpen}/>
-
 
 
         </Box>

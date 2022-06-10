@@ -47,7 +47,7 @@ const Contact = () => {
 				h="auto"
 				justifyContent={"center"}
 				alignItems={"center"}
-				mb={'5vh'}
+				mb={"15vh"}
 			>
 				<Flex w="100vw" h="auto" justify={"center"} alignItems={"center"}>
 					<Text
@@ -135,7 +135,7 @@ const Contact = () => {
 									ml={"1rem"}
 									fontWeight="semi-bold"
 								>
-									lucianosanchez125@hotmail.com
+									luchoqq25@gmail.com
 								</Text>
 							</Flex>
 							<Flex>
@@ -147,7 +147,7 @@ const Contact = () => {
 									ml={"1rem"}
 									fontWeight="semi-bold"
 								>
-									in/luciano-sanchez-66b549201
+									in/luchoqq
 								</Text>
 							</Flex>
 							<Flex>

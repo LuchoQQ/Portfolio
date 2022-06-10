@@ -1,9 +1,9 @@
 import React from "react";
-import { Grid, Flex, Text, Box } from "@chakra-ui/react";
+import { Grid, Flex, Text, Box, Image } from "@chakra-ui/react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import { useEffect } from "react";
-
+import Project from "../components/Project";
 const Portfolio = () => {
 	const control = useAnimation();
 	const [ref, inView] = useInView();
@@ -54,6 +54,7 @@ const Portfolio = () => {
 						My Projects
 					</Text>
 				</Flex>
+
 				<Grid
 					w="100vw"
 					h="auto"
@@ -62,23 +63,15 @@ const Portfolio = () => {
 					autoFlow={["row", "row", "row", "row", "column"]}
 					gap={"5rem"}
 				>
-					<Box
-						w={["60vw", "50vw", "30vw", "30vw", "20vw"]}
-						h={["30vh", "40vh", "40vh", "30vw", "40vh"]}
-						bg={"#ad1d71"}
-					></Box>
+					<Project
+						url="https://res.cloudinary.com/diylksocz/image/upload/v1654799935/movieverse_fondo_bey7yb.jpg"
+						repo="https://github.com/LuchoQQ/movieverse"
+						web="https://movieverse-olive.vercel.app"
+					/>
 
-					<Box
-						w={["60vw", "50vw", "30vw", "30vw", "20vw"]}
-						h={["30vh", "40vh", "40vh", "30vw", "40vh"]}
-						bg={"#ad1d71"}
-					></Box>
+					<Project />
 
-					<Box
-						w={["60vw", "50vw", "30vw", "30vw", "20vw"]}
-						h={["30vh", "40vh", "40vh", "30vw", "40vh"]}
-						bg={"#ad1d71"}
-					></Box>
+					<Project />
 				</Grid>
 			</Grid>
 		</motion.div>
